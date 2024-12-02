@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cool-underline{
+  position: relative;
+}
+.cool-underline::after{
+  content: '';
+  height: 10px;
+  background-color: #DC008366;
+  display: block;
+  position: absolute;
+  left: -8px;
+  width: 0;
+  bottom: 0px;
+  transform: skew(-21deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.cool-underline.show-underline::after{
+  width: calc(100% + 16px);
+}
+
+.btn-blue {
+  @apply bg-indigo-600 text-indigo-50 inline-flex items-center gap-1 py-3 px-8 rounded-xl shadow-lg hover:bg-indigo-800 transition duration-300 whitespace-nowrap
+}
+
+.btn-delete {
+  @apply bg-red-600 text-white inline-flex  py-3 px-8  rounded-xl font-semibold items-center ;
+  @apply hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500;
+}
+
+.card-container {
+  @apply flex flex-col items-center p-6 bg-indigo-50 rounded-lg shadow-lg
+}
+
+.card-container-row {
+  @apply flex flex-wrap items-center p-6 gap-8 bg-indigo-50 rounded-lg shadow-lg
+}

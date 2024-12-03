@@ -23,7 +23,7 @@ export default async function EventTypesPage() {
       <div className="space-y-6 w-full">
         {eventTypes?.map((evt) => {
           const { id, title, uri, description } = evt
-          const eventTypeLink = process.env.NEXT_PUBLIC_URL+(username?username:'')+'/'+uri
+          const eventTypeLink = process.env.NEXT_PUBLIC_URL+'/'+(username?username:'')+'/'+uri
           return (
             <div
               key={id}
